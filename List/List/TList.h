@@ -4,7 +4,7 @@
 template <class T>
 class TList
 {
-private:
+protected:
 	TLink <T> *pFirst;
 public:
 	void AddFirst(const T elem)
