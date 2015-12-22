@@ -1,9 +1,11 @@
 #pragma once
 #include "TLink.h"
 #include "TList.h"
+#include <iostream>
+using namespace std;
 
 template <class T>
-class THeadList : protected TList
+class THeadList 
 {
 protected:
 	TLink <T> *pHead, *pFirst, *pLast, *pCurr, *pPred, *pStop;
@@ -67,7 +69,7 @@ public:
 
 	void InsCurr(const T elem)
 	{
-		if (Curr == pFirst)
+		if (pCurr == pFirst)
 			InsFirst(elem);
 		else
 		{
