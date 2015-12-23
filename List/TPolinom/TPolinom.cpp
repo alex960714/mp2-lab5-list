@@ -31,7 +31,17 @@ TPolinom::TPolinom(TPolinom& Q)
 
 void TPolinom::InsMonom(TMonom m)
 {
-
+	Reset();
+	while (pCurr->val.power > m.power)
+		GoNext();
+	if (pCurr->val.power < m.power)
+		InsCurr(m);
+	else
+	{
+		pCurr->val.coeff += m.coeff;
+		if (pCurr->val.coeff == 0)
+			DelCurr();
+	}
 }
 
 TPolinom& TPolinom::operator+=(TPolinom& Q)

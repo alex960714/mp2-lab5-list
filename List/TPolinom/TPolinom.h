@@ -23,10 +23,10 @@ public:
 	TPolinom(int mas[][2], int size);
 	TPolinom(TPolinom& Q);  //конструктор копирования
 
-	void InsMonom(TMonom m);
-	TPolinom& operator+=(TPolinom &Q);
+	void InsMonom(TMonom m);  //вставить моном
+	TPolinom& operator+=(TPolinom &Q);  
 	TPolinom& operator*=(const double p);
-	void Print();
+	void Print();  //печать полинома
 };
 
 #endif

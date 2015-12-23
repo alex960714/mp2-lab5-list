@@ -1,4 +1,6 @@
 #pragma once
+#ifndef _T_LIST_H_
+#define _T_LIST_H_
 #include "TLink.h"
 
 template <class T>
@@ -27,3 +29,5 @@ public:
 		Curr->pNext = tmp;
 	}
 };
+
+#endif

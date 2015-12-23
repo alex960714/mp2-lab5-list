@@ -1,4 +1,6 @@
 #pragma once
+#ifndef _T_HEADLIST_H_
+#define _T_HEADLIST_H_
 #include "TLink.h"
 #include "TList.h"
 #include <iostream>
@@ -141,3 +143,5 @@ public:
 
 	bool IsEnd() { return pCurr == pStop; }
 };
+
+#endif
