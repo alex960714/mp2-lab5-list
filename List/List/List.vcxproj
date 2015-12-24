@@ -71,7 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Александр\Documents\GitHub\mp2-lab5-list\List\T_StackList;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Александр\Documents\GitHub\mp2-lab5-list\List\TPolinom;C:\Users\Александр\Documents\GitHub\mp2-lab5-list\List\T_StackList;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -94,7 +94,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>T_StackList.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>T_StackList.lib;TPolinom.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Александр\Documents\GitHub\mp2-lab5-list\List\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

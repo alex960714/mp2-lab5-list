@@ -1,8 +1,8 @@
 #pragma once
 #ifndef _T_STACKLIST_H_
 #define _T_STACKLIST_H_
-#include <TLink.h>
-#include <TList.h>
+#include "TLink.h"
+#include "TList.h"
 
 template <class T>
 class TStackList

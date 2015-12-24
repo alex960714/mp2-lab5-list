@@ -10,6 +10,8 @@ TPolinom::TPolinom()
 
 TPolinom::TPolinom(int mas[][2], int size)
 {
+	if (size <= 0)
+		throw - 1;
 	pHead->val.coeff = 0;
 	pHead->val.power = -1;
 	for (int i = 0; i < size; i++)
@@ -17,6 +19,8 @@ TPolinom::TPolinom(int mas[][2], int size)
 		TMonom m;
 		m.coeff = mas[i][0];
 		m.power = mas[i][1];
+		if (m.power < 0)
+			throw - 1;
 		InsLast(m);
 	}
 }
@@ -81,6 +85,12 @@ TPolinom& TPolinom::operator*=(const double p)
 	    for (Reset(); !IsEnd(); GoNext())
 		    pCurr->val.coeff *= p;
 	return *this;
+}
+
+TPolinom& TPolinom::operator-=(TPolinom &Q)
+{
+	Q *= -1;
+	return (*this) += Q;
 }
 
 void TPolinom::Print()

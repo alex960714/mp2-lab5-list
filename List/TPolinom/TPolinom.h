@@ -1,8 +1,8 @@
-#pragma once
+//#pragma once
 #ifndef _T_POLINOM_H_
 #define _T_POLINOM_H_
-#include <TLink.h>
-#include <THeadList.h>
+#include "TLink.h"
+#include "THeadList.h"
 #include <TStackList.h>
 #include <iostream>
 using namespace std;
@@ -13,8 +13,8 @@ struct TMonom
 	int power;
 };
 
-bool operator<(const TMonom& m1, const TMonom& m2) { return m1.power < m2.power; }
-bool operator>(const TMonom& m1, const TMonom& m2) { return m1.power > m2.power; }
+bool operator<(const TMonom& m1, const TMonom& m2) { return m1.power < m2.power; };
+bool operator>(const TMonom& m1, const TMonom& m2) { return m1.power > m2.power; };
 
 class TPolinom : public THeadList <TMonom>
 {
@@ -26,6 +26,7 @@ public:
 	void InsMonom(TMonom m);  //вставить моном
 	TPolinom& operator+=(TPolinom &Q);  
 	TPolinom& operator*=(const double p);
+	TPolinom& operator-=(TPolinom &Q);
 	void Print();  //печать полинома
 };
 
