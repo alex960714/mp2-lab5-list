@@ -78,8 +78,8 @@ TPolinom& TPolinom::operator*=(const double p)
 	if (p == 0)
 	{
 		Reset();
-		while (!IsEnd())
-			DelCurr();
+		while (pFirst!=pStop)
+			DelFirst();
 	}
 	else
 	    for (Reset(); !IsEnd(); GoNext())
@@ -95,6 +95,9 @@ TPolinom& TPolinom::operator-=(TPolinom &Q)
 
 void TPolinom::Print()
 {
+	if (!len)
+		cout << "0 ";
+	else
 	for (Reset(); !IsEnd(); GoNext())
 	{
 		if ((abs(pCurr->val.coeff) != 1)||(!pCurr->val.power))

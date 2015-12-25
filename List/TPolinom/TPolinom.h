@@ -3,7 +3,6 @@
 #define _T_POLINOM_H_
 #include "TLink.h"
 #include "THeadList.h"
-//#include <TStackList.h>
 #include <iostream>
 using namespace std;
 

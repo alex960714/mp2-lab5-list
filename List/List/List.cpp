@@ -4,7 +4,6 @@
 #include "stdafx.h"
 #include "TLink.h"
 #include <TPolinom.h>
-//#include "THeadList.h"
 #include <locale.h>
 #include <iostream>
 using namespace std;

@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #ifndef _T_STACKLIST_H_
 #define _T_STACKLIST_H_
 #include "TLink.h"

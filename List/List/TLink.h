@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #ifndef _T_LINK_H_
 #define _T_LINK_H_
 
