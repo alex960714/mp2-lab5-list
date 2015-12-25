@@ -97,7 +97,7 @@ void TPolinom::Print()
 {
 	for (Reset(); !IsEnd(); GoNext())
 	{
-		if (pCurr->val.coeff != 1)
+		if ((pCurr->val.coeff != 1)||(!pCurr->val.power))
 			cout << pCurr->val.coeff << " ";
 		if (pCurr->val.power / 100 > 0)
 			cout << "x^" << pCurr->val.power / 100 << " ";

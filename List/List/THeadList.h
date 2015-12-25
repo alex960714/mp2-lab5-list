@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #ifndef _T_HEADLIST_H_
 #define _T_HEADLIST_H_
 #include "TLink.h"
@@ -19,7 +19,7 @@ public:
 		pHead = new TLink <T>;
 		pStop = pHead;
 		pHead->pNext = pStop;
-		pFirst = pLast = pCurr = pHead = NULL;
+		pFirst = pLast = pCurr = pPred = NULL;
 		pos = -1;
 		len = 0;
 	}
@@ -28,7 +28,7 @@ public:
 		if (len)
 		{
 			pCurr = pFirst;
-			while (pCurr != NULL)
+			while (pCurr != pStop)
 			{
 				pPred = pCurr;
 				pCurr = pCurr->pNext;

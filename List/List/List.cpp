@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "TLink.h"
 #include <TPolinom.h>
-#include "THeadList.h"
+//#include "THeadList.h"
 #include <locale.h>
 #include <iostream>
 using namespace std;
@@ -41,17 +41,17 @@ int main()
 			do
 			{
 				cin >> op1;
-				int n1;
-				int mas1[100][2];
-				if (op != '2')
+				int n1 = 1;
+				int mas1[100][2] = { 0,0 };
+				if (op1 != '2')
 				{
 					cout << "Введите размер второго полинома:" << endl;
 					cin >> n1;
 					cout << "Введите второй полином в формате коэффициент + степени:" << endl;
 					for (int i = 0; i < n1; i++)
 					{
-						cin >> mas[i][0];
-						cin >> mas[i][1];
+						cin >> mas1[i][0];
+						cin >> mas1[i][1];
 					}
 				}
 				TPolinom Q(mas1, n1);
@@ -60,13 +60,13 @@ int main()
 				case '1': P += Q;
 					P.Print();
 					break;
-				case 2: cout << "Введите константу:" << endl;
+				case '2': cout << "Введите константу:" << endl;
 					int c;
 					cin >> c;
 					P *= c;
 					P.Print();
 					break;
-				case 3: P -= Q;
+				case '3': P -= Q;
 					P.Print();
 					break;
 				default: cout << "Некорректный ввод. Введите значение ещё раз:" << endl;
