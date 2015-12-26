@@ -100,6 +100,10 @@ void TPolinom::Print()
 	else
 	for (Reset(); !IsEnd(); GoNext())
 	{
+		if ((pCurr->val.coeff > 0)&&(pCurr != pFirst))
+			cout << "+ ";
+		if (pCurr->val.coeff < 0)
+			cout << "- ";
 		if ((abs(pCurr->val.coeff) != 1)||(!pCurr->val.power))
 			cout << abs(pCurr->val.coeff) << " ";
 		if (pCurr->val.power / 100 > 0)
@@ -108,10 +112,7 @@ void TPolinom::Print()
 			cout << "y^" << pCurr->val.power % 100 / 10 << " ";
 		if (pCurr->val.power % 10 > 0)
 			cout << "z^" << pCurr->val.power % 10 << " ";
-		if (pCurr->pNext->val.coeff > 0)
-			cout << "+ ";
-		if (pCurr->pNext->val.coeff < 0)
-			cout << "- ";
+		
 	}
 	cout << endl;
 }

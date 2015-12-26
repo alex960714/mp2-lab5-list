@@ -89,7 +89,11 @@ public:
 		if (len)
 		{
 			if (pCurr == pFirst)
+			{
 				DelFirst();
+				pCurr = pFirst;
+				pos++;
+			}
 			else
 			{
 				pPred->pNext = pCurr->pNext;
