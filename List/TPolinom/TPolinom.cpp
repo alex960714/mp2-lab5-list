@@ -54,7 +54,9 @@ TPolinom& TPolinom::operator+=(TPolinom& Q)
 	Q.Reset();
 	while (Q.pCurr->val.power != -1)
 	{
-		if (pCurr->val.power > Q.pCurr->val.power)
+		InsMonom(Q.pCurr->val);
+		Q.GoNext();
+		/*if (pCurr->val.power > Q.pCurr->val.power)
 			GoNext();
 		else if (pCurr->val.power < Q.pCurr->val.power)
 		{
@@ -68,7 +70,7 @@ TPolinom& TPolinom::operator+=(TPolinom& Q)
 				DelCurr();
 			else GoNext();
 			Q.GoNext();
-		}
+		}*/
 	}
 	return *this;
 }
