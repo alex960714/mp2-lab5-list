@@ -6,8 +6,8 @@ template <class T>
 class TLink
 {
 public:
-	T val;
-	TLink *pNext;
+	T val;  //значение элемента
+	TLink *pNext;  //указатель на следующий элемент
 };
 
 #endif

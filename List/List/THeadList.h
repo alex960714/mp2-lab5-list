@@ -38,7 +38,7 @@ public:
 		delete pHead;
 	}
 
-	void InsFirst(const T elem)
+	void InsFirst(const T elem)  //добавить первый элемент в список
 	{
 		TLink <T> *tmp = new TLink <T>;
 		tmp->val = elem;
@@ -57,7 +57,7 @@ public:
 		pos++;
 	}
 
-	void DelFirst()
+	void DelFirst()  //удалить первый элемент из списка
 	{
 		if (len)
 		{
@@ -69,7 +69,7 @@ public:
 		}
 	}
 
-	void InsCurr(const T elem)
+	void InsCurr(const T elem)  //добавить элемент в список перед текущим
 	{
 		if (pCurr == pFirst)
 			InsFirst(elem);
@@ -84,7 +84,7 @@ public:
 		}
 	}
 
-	void DelCurr()
+	void DelCurr()  //удалить текущий элемент из списка
 	{
 		if (len)
 		{
@@ -104,7 +104,7 @@ public:
 		}
 	}
 
-	void InsLast(const T elem)
+	void InsLast(const T elem)  //добавить последний элемент в список
 	{
 		if (!len)
 			InsFirst(elem);
@@ -119,7 +119,7 @@ public:
 		}
 	}
 
-	void DelLast()
+	void DelLast()  //удалить последний элемент из списка
 	{
 		if (len)
 		{
@@ -137,15 +137,15 @@ public:
 		}
 	}
 
-	void Reset() { pCurr = pFirst; }
+	void Reset() { pCurr = pFirst; }  //указать текущим первый элемент в списке
 
-	void GoNext()
+	void GoNext()  //перейти к следующему элементу
 	{
 		pPred = pCurr;
 		pCurr = pCurr->pNext;
 	}
 
-	bool IsEnd() { return pCurr == pStop; }
+	bool IsEnd() { return pCurr == pStop; }  //проверка на конец списка
 };
 
 #endif

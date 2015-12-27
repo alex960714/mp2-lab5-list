@@ -6,12 +6,13 @@
 #include <iostream>
 using namespace std;
 
-struct TMonom
+struct TMonom  //структура "моном"
 {
-	double coeff;
-	int power;
+	double coeff;  //коэффициент перед мономом
+	int power;  //степени момнома
 };
 
+//операторы сравнения мономов
 inline bool operator<(const TMonom& m1, const TMonom& m2) { return m1.power < m2.power; };
 inline bool operator>(const TMonom& m1, const TMonom& m2) { return m1.power > m2.power; };
 
