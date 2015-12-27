@@ -26,6 +26,7 @@ public:
 	TPolinom& operator+=(TPolinom &Q);  
 	TPolinom& operator*=(const double p);
 	TPolinom& operator-=(TPolinom &Q);
+	bool operator==(TPolinom &Q);
 	void Print();  //печать полинома
 };
 

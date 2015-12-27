@@ -93,6 +93,14 @@ TPolinom& TPolinom::operator-=(TPolinom &Q)
 	return (*this) += Q;
 }
 
+bool TPolinom::operator==(TPolinom &Q)
+{
+	(*this) -= Q;
+	if (!len)
+		return true;
+	return false;
+}
+
 void TPolinom::Print()
 {
 	if (!len)
